@@ -1,8 +1,11 @@
 //let playerChoice = prompt("Pelase enter rock, paper, or scissors.");
 let computer = "rock";
-const playerChoice = document.querySelector('.guessField');
+const playerChoice = "";
 
+function rps(){
 if(playerChoice){
+    playerChoice = document.getElementById("guessField");
+    console.log(playerChoice);
     let playerOne = playerChoice.trim().toLowerCase();
     if(playerOne === "rock" || playerOne === "paper" || playerOne === "scissors"){
 
@@ -46,3 +49,6 @@ if(playerChoice){
 } else {
     console.log("no input");
 }
+}
+
+rps();

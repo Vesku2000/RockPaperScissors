@@ -42,27 +42,44 @@ function checkCompany(company){
 
 checkCompany("IMB");
 //13. Tulosta yritykset, mutta filtteröi pois yrityksen joiden nimessä on enemmän kuin yksi 'o'-kirjain
-
+var letter = "";
 function checkChars(letter){
     var count = 0;
-
+    console.log(letter);
+    console.log(itCompanies.length);
     for(let i = 0; i < itCompanies.length -1; i++){
+        console.log("first loop");
         for(let j = 0; j < itCompanies[i].length; j++){
-            if(itCompanies[i].charAt(j) == "o"){
+            console.log("second loop");
+            for(let c = 0; c < itCompanies[i].length; c++){
+            if(itCompanies[i].charAt(c) === letter){
+                console.log("checking letters");
                 count++;
-            }
+            }}
             return count;
         }
     }
+
+    if(count >= 2){
+        console.log("there is more than 2 o letter");
+    }
 }
 
-
+checkChars("o");
 //14. Tulosta yritykset käyttäen sort()-metodia
+console.log(itCompanies.sort());
 //15. Käännä taulukon järjestys käyttäen reverse()-metodia
+console.log(itCompanies.reverse());
 //16. Poista (slice out) taulukosta 3 ensimmäistä yritystä
+console.log(itCompanies.slice(3));
 //17. Poista (slice out) taulukosta 3 viimeistä yritystä
+console.log(itCompanies.slice(0, -3));
 //18. Poista (slice out) keskimmäinen tai keskimmäiset yritykset taulukosta
+
 //19. Poista ensimmäinen yritys taulukosta
+console.log(itCompanies.slice(1));
+console.log(itCompanies);
 //20. Poista viimeinen yritys taulukosta
+
 //21. Poista kaikki yritykset taulukosta
 //22. Luo kaksiulotteinen taulukko ja esitä esimerkki miten haet sieltä valitun tiedon.

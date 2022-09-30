@@ -80,6 +80,7 @@ console.log(itCompanies.slice(0, -3));
 console.log(itCompanies.slice(1));
 console.log(itCompanies);
 //20. Poista viimeinen yritys taulukosta
-
+console.log(itCompanies.splice(itCompanies.length -1, 1));
 //21. Poista kaikki yritykset taulukosta
+
 //22. Luo kaksiulotteinen taulukko ja esitä esimerkki miten haet sieltä valitun tiedon.
